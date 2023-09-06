@@ -62,7 +62,7 @@ def process(data):
                     total_result[num] = dictionary
 
 
-    with open(f'processed_posts.json', 'w') as f:
+    with open(f'data/processed_posts.json', 'w') as f:
         json.dump(total_result, f)
     
     return total_result
