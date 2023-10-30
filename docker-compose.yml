@@ -1,10 +1,13 @@
-version: '3.8'
+version: '3.3'
 
 services:
   nlp:
-    build: .
+    image: ghcr.io/aparinov/2023_iasng:dev
+    container_name: nlp
     command: uvicorn main:app --host 0.0.0.0
-    volumes:
-      - .:/app
     ports:
-      - 8000:8000
+      - 8004:8000
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+volumes:
+  nlp:
