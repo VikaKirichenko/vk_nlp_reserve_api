@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from nlp.process import process
+from process import process
 
 class Item(BaseModel):
     data: list
